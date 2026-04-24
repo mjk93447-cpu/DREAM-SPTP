@@ -10,7 +10,7 @@
 
 ### 1.1 Background
 
-Flexible Printed Circuit Board (FPCB) bending is a critical manufacturing process where micro-cracks in internal copper traces can lead to latent reliability failures. Current quality control relies on end-of-line microscopic confirmation, which consumes significant time and resources. The fundamental challenge is that side-view cameras capture bending kinematics, but the FPCB appears as a thin line�봫aking direct top-view crack synthesis physically impossible.
+Flexible Printed Circuit Board (FPCB) bending is a critical manufacturing process where micro-cracks in internal copper traces can lead to latent reliability failures. Current quality control relies on end-of-line microscopic confirmation, which consumes significant time and resources. The fundamental challenge is that side-view cameras capture bending kinematics, but the FPCB appears as a thin line shape. So, direct top-view crack synthesis from only side-view camera is physically impossible.
 
 ### 1.2 Data Constraints
 

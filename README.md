@@ -59,8 +59,8 @@ The Spatio-Temporal Physics Tensor X  R^(T*S*F) is extracted from side-bending v
 | F1 | v_y(t,s) | Vertical velocity | Side vision vector map |
 | F2 | a_y(t,s) | Vertical acceleration | Side vision vector map |
 | F3 | j_y(t,s) | Jerk (rate of acceleration change) | Side vision vector map |
-| F4 | Lc(t,s) | Local curvature | Geometric calculation |
-| F5 | Gb(t) | Global bending angle | Endpoint tracking |
+| F4 | L_c(t,s) | Local curvature | Geometric calculation |
+| F5 | G_b(t) | Global bending angle | Endpoint tracking |
 | F6 | c(t) | Roller contact flag | Profile discontinuity |
 
 - T: Time frames (60fps 4s cycle = 240 frames)

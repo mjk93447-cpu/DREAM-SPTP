@@ -56,9 +56,9 @@ The Spatio-Temporal Physics Tensor X  R^(T*S*F) is extracted from side-bending v
 | Channel | Symbol | Physical Meaning | Source |
 |---------|--------|-----------------|--------|
 | F0 | y(t,s) | Vertical displacement profile | Centerline tracking |
-| F1 | v_y(t,s) | Vertical velocity | �굖/�굏 |
-| F2 | a_y(t,s) | Vertical acceleration | �궰쾧/�굏짼 |
-| F3 | j_y(t,s) | Jerk (rate of acceleration change) | �궰퀉/�굏쨀 |
+| F1 | v_y(t,s) | Vertical velocity | Side vision vector map |
+| F2 | a_y(t,s) | Vertical acceleration | Side vision vector map |
+| F3 | j_y(t,s) | Jerk (rate of acceleration change) | Side vision vector map |
 | F4 | Lc(t,s) | Local curvature | Geometric calculation |
 | F5 | Gb(t) | Global bending angle | Endpoint tracking |
 | F6 | c(t) | Roller contact flag | Profile discontinuity |
@@ -107,8 +107,8 @@ The shared encoder aligns video and image modalities through contrastive learnin
 |--------|-------------------|-------------------------|-------------|
 | Precision | 35-50% | 60-75% | +25-30%p |
 | Recall | 75-85% | 80-90% | +5-10%p |
-| Localization | 짹20% of length | 짹5-8% of length | 3-4x |
-| Timing Accuracy | 짹10 frames | 짹3-5 frames | 2x |
+| Localization | 20% of length | 5-8% of length | 3-4x |
+| Timing Accuracy | 10 frames | 3-5 frames | 2x |
 | Microscope ROI Hit | 30% | 70-85% | 2.5-3x |
 
 ### 4.2 Cost-Benefit Analysis

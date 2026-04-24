@@ -150,7 +150,7 @@ The strategic value extends beyond immediate cost savings:
 
 1. Validate on held-out test set: 5 NG + 1,000 OK cycles
 2. Optimize classification threshold for F2-score (Recall-prioritized) or Precision target
-3. Implement two-stage cascade: High-recall screening �� High-precision confirmation
+3. Implement two-stage cascade: High-recall screening High-precision confirmation
 4. Deploy real-time inference on side-bending line with <100ms latency target
 5. Establish feedback loop: Confirmed NG results update anomaly signature library
 

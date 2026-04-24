@@ -63,7 +63,7 @@ The Spatio-Temporal Physics Tensor X  R^(T*S*F) is extracted from side-bending v
 | F5 | Gb(t) | Global bending angle | Endpoint tracking |
 | F6 | c(t) | Roller contact flag | Profile discontinuity |
 
-- T: Time frames (60fps 횞 4s cycle = 240 frames)
+- T: Time frames (60fps 4s cycle = 240 frames)
 - S: Spatial bins along FPCB length (64~128 segments)
 - F: 7 physics channels
 

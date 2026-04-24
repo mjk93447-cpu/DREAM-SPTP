@@ -45,13 +45,13 @@ Multimodal anomaly detection combining video and image modalities shows signific
 
 The proposed DRAEM-STPT architecture consists of three parallel streams:
 
-1. **Stream 1: Masked Autoencoder (MAE)** �� Learns the normal bending manifold from 10,000 OK samples through self-supervised reconstruction.
-2. **Stream 2: Discriminative Network** �� Classifies each (t,s) cell as normal or anomalous, trained on 10,000 physics-synthetic NG samples.
-3. **Stream 3: Cross-Modal Alignment** �� Post-bend microscope images (when available) provide spatial supervision through shared latent space alignment.
+1. **Stream 1: Masked Autoencoder (MAE)**  Learns the normal bending manifold from 10,000 OK samples through self-supervised reconstruction.
+2. **Stream 2: Discriminative Network**  Classifies each (t,s) cell as normal or anomalous, trained on 10,000 physics-synthetic NG samples.
+3. **Stream 3: Cross-Modal Alignment**  Post-bend microscope images (when available) provide spatial supervision through shared latent space alignment.
 
 ### 3.2 STPT Definition
 
-The Spatio-Temporal Physics Tensor X �� R^(T횞S횞F) is extracted from side-bending video:
+The Spatio-Temporal Physics Tensor X  R^(T*S*F) is extracted from side-bending video:
 
 | Channel | Symbol | Physical Meaning | Source |
 |---------|--------|-----------------|--------|
@@ -59,8 +59,8 @@ The Spatio-Temporal Physics Tensor X �� R^(T횞S횞F) is extracted from side
 | F1 | v_y(t,s) | Vertical velocity | �굖/�굏 |
 | F2 | a_y(t,s) | Vertical acceleration | �궰쾧/�굏짼 |
 | F3 | j_y(t,s) | Jerk (rate of acceleration change) | �궰퀉/�굏쨀 |
-| F4 | 觀(t,s) | Local curvature | Geometric calculation |
-| F5 | 罐(t) | Global bending angle | Endpoint tracking |
+| F4 | Lc(t,s) | Local curvature | Geometric calculation |
+| F5 | Gb(t) | Global bending angle | Endpoint tracking |
 | F6 | c(t) | Roller contact flag | Profile discontinuity |
 
 - T: Time frames (60fps 횞 4s cycle = 240 frames)

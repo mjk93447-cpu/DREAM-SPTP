@@ -1,0 +1,8 @@
+PyQt5
+opencv-python
+numpy
+torch
+torchvision
+scikit-image
+matplotlib
+

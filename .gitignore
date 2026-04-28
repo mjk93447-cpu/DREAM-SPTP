@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+fpcb_heatmap_app/sample_input/
+fpcb_heatmap_app/sample_output/
+fpcb_heatmap_app/real_samples/
+fpcb_heatmap_app/tuning_runs/
+fpcb_heatmap_app/dist/
+fpcb_heatmap_app/build/
+fpcb_heatmap_app/*.spec
+

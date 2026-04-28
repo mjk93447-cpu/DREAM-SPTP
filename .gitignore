@@ -8,6 +8,7 @@ fpcb_heatmap_app/sample_input/
 fpcb_heatmap_app/sample_output/
 fpcb_heatmap_app/real_samples/
 fpcb_heatmap_app/tuning_runs/
+fpcb_heatmap_app/validation_output/
 fpcb_heatmap_app/dist/
 fpcb_heatmap_app/build/
 fpcb_heatmap_app/*.spec

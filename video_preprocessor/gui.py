@@ -23,8 +23,9 @@ class VideoProcessorHandler(FileSystemEventHandler):
             filename = os.path.basename(event.src_path)
             output_path = os.path.join(self.output_folder, f"processed_{filename}")
             try:
-                video_processor.process_video(event.src_path, output_path, self.roi)
+                video_processor.process_video(event.src_path, output_path, self.roi, delete_original=True)
                 self.log_callback(f"Processed and saved: {output_path}")
+                self.log_callback(f"Deleted original file: {event.src_path}")
             except Exception as e:
                 self.log_callback(f"Error processing {event.src_path}: {str(e)}")
 

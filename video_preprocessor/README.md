@@ -30,6 +30,8 @@ pip install -r requirements.txt
 4. Set the ROI coordinates (x, y, width, height).
 5. Click "Start Monitoring" to begin automatic processing.
 
+> After successful processing, the original source video is deleted automatically to free storage space.
+
 ## Building for Windows
 
 Use PyInstaller to create a standalone executable:

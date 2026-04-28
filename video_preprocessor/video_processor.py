@@ -1,13 +1,14 @@
 import cv2
 import os
 
-def process_video(input_path, output_path, roi):
+def process_video(input_path, output_path, roi, delete_original=False):
     """
     Process a video file by extracting the ROI from each frame and saving a compressed video.
 
     :param input_path: Path to the input video file
     :param output_path: Path to save the processed video
     :param roi: Tuple (x, y, w, h) defining the region of interest
+    :param delete_original: If True, delete the source file after successful processing
     """
     if not os.path.exists(input_path):
         raise FileNotFoundError(f"Input video file not found: {input_path}")
@@ -46,8 +47,19 @@ def process_video(input_path, output_path, roi):
     cap.release()
     out.release()
 
+    if not os.path.exists(output_path) or os.path.getsize(output_path) == 0:
+        raise IOError(f"Output file was not created: {output_path}")
+
+    if delete_original:
+        try:
+            os.remove(input_path)
+        except OSError as e:
+            raise IOError(f"Processed output but failed to delete original file: {input_path}") from e
+
     print(f"Processed {frame_count} frames. Saved to {output_path}")
+
+    return output_path
 
 if __name__ == "__main__":
     # Example usage
-    process_video("input.mp4", "output.mp4", (100, 100, 200, 200))
+    process_video("input.mp4", "output.mp4", (100, 100, 200, 200), delete_original=False)
